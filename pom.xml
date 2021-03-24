@@ -7,7 +7,7 @@
   <groupId>jenkins.build</groupId>
   <artifactId>mavenproject</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>war</packaging>
+ 
 
   <name>mavenproject</name>
   <!-- FIXME change it to the project's website -->
@@ -52,6 +52,13 @@
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
           <version>3.0.2</version>
+        </plugin>
+        <plugin>            
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-war-plugin</artifactId>
+          <configuration>
+            <webXml>src\main\webapp\WEB-INF\web.xml</webXml>        
+          </configuration>
         </plugin>
         <plugin>
           <artifactId>maven-install-plugin</artifactId>
